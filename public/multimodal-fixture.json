@@ -1,0 +1,38 @@
+{
+  "image": {
+    "id": "lab-desk-v1",
+    "file": "scene-fixture.svg",
+    "width": 1280,
+    "height": 720,
+    "patchCount": 240,
+    "focusRegions": ["monitor-chart", "development-board", "blue-mug", "orange-notebook"]
+  },
+  "caption": "A desk scene with a monitor showing a chart, a compact black development board, an orange notebook, a keyboard, and a blue mug.",
+  "preprocessMs": 86,
+  "tasks": [
+    {
+      "id": "monitor-chart",
+      "question": "What is shown on the monitor?",
+      "answer": "A performance chart with colored bars and a white trend line.",
+      "focusRegion": "monitor-chart",
+      "firstTokenMs": 124,
+      "answerTotalMs": 248
+    },
+    {
+      "id": "desk-object",
+      "question": "Which object on the desk suggests a WebGPU experiment setup?",
+      "answer": "A compact black development board with glowing blue status lights.",
+      "focusRegion": "development-board",
+      "firstTokenMs": 138,
+      "answerTotalMs": 272
+    },
+    {
+      "id": "mug-color",
+      "question": "What color is the mug beside the keyboard?",
+      "answer": "The mug beside the keyboard is blue.",
+      "focusRegion": "blue-mug",
+      "firstTokenMs": 112,
+      "answerTotalMs": 224
+    }
+  ]
+}
