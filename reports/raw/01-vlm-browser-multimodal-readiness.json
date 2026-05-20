@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "repo": "exp-vlm-browser-multimodal",
+    "commit": "3e4835b",
+    "timestamp": "2026-05-20T15:46:25.516Z",
+    "owner": "ai-webgpu-lab",
+    "track": "multimodal",
+    "scenario": "vlm-browser-multimodal-readiness",
+    "notes": "image=lab-desk-v1; patches=240; prompts=3; focus=monitor-chart|development-board|blue-mug|orange-notebook; backend=webgpu; fallback=false; accuracy=1; automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:46:27.524Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "01-vlm-browser-multimodal-readiness"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "navigator.gpu available",
+      "required_features": [
+        "shader-f16"
+      ],
+      "limits": {
+        "maxStorageBuffersPerShaderStage": 8,
+        "maxComputeWorkgroupStorageSize": 16384
+      }
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "worker",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "vlm",
+    "name": "vlm-browser-multimodal-readiness",
+    "input_profile": "1280x720-3-questions",
+    "model_id": "deterministic-vlm-browser-v1",
+    "dataset": "multimodal-fixture-v1"
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 1064,
+      "init_ms": 334.83,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "vlm": {
+      "image_preprocess_ms": 86.2,
+      "image_to_first_token_ms": 211,
+      "answer_total_ms": 334.83,
+      "accuracy_task_score": 1
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/01-vlm-browser-multimodal-readiness.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-vlm-browser-multimodal/",
+    "runtime_adapter": {
+      "id": "deterministic-mock",
+      "label": "Deterministic Mock",
+      "version": "1.0.0",
+      "capabilities": [
+        "prefill",
+        "decode",
+        "fixed-output-budget"
+      ],
+      "loadType": "synchronous",
+      "isReal": false,
+      "status": "deterministic",
+      "message": "Deterministic harness — replace by registering a real adapter."
+    },
+    "screenshots": [
+      "./reports/screenshots/01-vlm-browser-multimodal-readiness.png"
+    ]
+  }
+}

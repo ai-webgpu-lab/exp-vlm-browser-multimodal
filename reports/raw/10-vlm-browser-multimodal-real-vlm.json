@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "repo": "exp-vlm-browser-multimodal",
+    "commit": "3e4835b",
+    "timestamp": "2026-05-20T15:46:36.003Z",
+    "owner": "ai-webgpu-lab",
+    "track": "multimodal",
+    "scenario": "vlm-browser-multimodal-readiness",
+    "notes": "image=lab-desk-v1; patches=240; prompts=3; focus=monitor-chart|development-board|blue-mug|orange-notebook; backend=webgpu; fallback=false; accuracy=1; realAdapter=fallback(adapter.loadModel is not a function); automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:46:37.135Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "10-vlm-browser-multimodal-real-vlm",
+    "capture_url_search": "?mode=real-vlm"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "navigator.gpu available",
+      "required_features": [
+        "shader-f16"
+      ],
+      "limits": {
+        "maxStorageBuffersPerShaderStage": 8,
+        "maxComputeWorkgroupStorageSize": 16384
+      }
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "worker",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "vlm",
+    "name": "vlm-browser-multimodal-readiness",
+    "input_profile": "1280x720-3-questions",
+    "model_id": "deterministic-vlm-browser-v1",
+    "dataset": "multimodal-fixture-v1"
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 1839.3,
+      "init_ms": 336.03,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "vlm": {
+      "image_preprocess_ms": 87.5,
+      "image_to_first_token_ms": 212.43,
+      "answer_total_ms": 336.03,
+      "accuracy_task_score": 1
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/10-vlm-browser-multimodal-real-vlm.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-vlm-browser-multimodal/",
+    "runtime_adapter": {
+      "id": "vlm-xenova-smolvlm-instruct-300",
+      "label": "VLM Xenova/SmolVLM-Instruct (Transformers.js 3.0.0)",
+      "status": "connected",
+      "isReal": true,
+      "version": "3.0.0",
+      "capabilities": [
+        "prefill",
+        "decode",
+        "image-text-to-text",
+        "fixed-output-budget"
+      ],
+      "loadType": "async",
+      "message": "Real runtime adapter 'vlm-xenova-smolvlm-instruct-300' is connected."
+    },
+    "screenshots": [
+      "./reports/screenshots/10-vlm-browser-multimodal-real-vlm.png"
+    ]
+  }
+}
